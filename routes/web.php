@@ -6,10 +6,7 @@ use Illuminate\Auth\Events\Login;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
 
-Route::get('/', function () {
-  return view('welcome');
-})->name("welcome");
-
+Route::get('/', [HomeController::class,'index'])->name('home');
 Route::prefix('auth')->group(function () {
   Route::get('/login', [AuthController::class, "getLogin"])->name('login');
   Route::post('/login', [AuthController::class, "postLogin"])->name('post.login');

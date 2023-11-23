@@ -283,44 +283,30 @@
                 Education
               </h3>
               <div class="row gy-4">
-                <div class="col-12" data-aos="fade-up" data-aos-delay="600">
-                  <div class="bg-base p-4 rounded-4 shadow-effect">
-                    <h4>Master of Software Engineering</h4>
-                    <p class="text-brand mb-2">
-                      De Mars University Venston Bay (2015 - 2020)
-                    </p>
-                    <p class="mb-0">
-                      All we are more and design lorem ipsum dolor creativity
-                      sit amet consectetur adipisicing elit
-                    </p>
-                  </div>
-                </div>
 
-                <div class="col-12" data-aos="fade-up" data-aos-delay="600">
-                  <div class="bg-base p-4 rounded-4 shadow-effect">
-                    <h4>Master of Software Engineering</h4>
-                    <p class="text-brand mb-2">
-                      De Mars University Venston Bay (2015 - 2020)
-                    </p>
-                    <p class="mb-0">
-                      All we are more and design lorem ipsum dolor creativity
-                      sit amet consectetur adipisicing elit
-                    </p>
+                  <!---
+                    xp : exeperience (array data)
+                    xpd : experience detail (item)
+                  --->
+                  @foreach ($edu as $xpd)
+                  
+                  <div class="col-12" data-aos="fade-up" data-aos-delay="600">
+                    <div class="bg-base p-4 rounded-4 shadow-effect">
+                      <h4>{{  $xpd->degree_title }}</h4>
+                      <p class="text-brand mb-2">
+                        (
+                          {{ $xpd->edu_start_date }} - {{ $xpd->edu_end_date }}
+                        )
+                      </p>
+                      <p class="mb-0">
+                        {{ $xpd->education_description }}
+                      </p>
+                    </div>
                   </div>
-                </div>
+  
+  
+                  @endforeach
 
-                <div class="col-12" data-aos="fade-up" data-aos-delay="600">
-                  <div class="bg-base p-4 rounded-4 shadow-effect">
-                    <h4>Master of Software Engineering</h4>
-                    <p class="text-brand mb-2">
-                      De Mars University Venston Bay (2015 - 2020)
-                    </p>
-                    <p class="mb-0">
-                      All we are more and design lorem ipsum dolor creativity
-                      sit amet consectetur adipisicing elit
-                    </p>
-                  </div>
-                </div>
               </div>
             </div>
 
@@ -329,38 +315,28 @@
                 Experience
               </h3>
               <div class="row gy-4">
-                <div class="col-12" data-aos="fade-up" data-aos-delay="600">
-                  <div class="bg-base p-4 rounded-4 shadow-effect">
-                    <h4>Applications developer</h4>
-                    <p class="text-brand mb-2">Twitter (2018 - 2020)</p>
-                    <p class="mb-0">
-                      All we are more and design lorem ipsum dolor creativity
-                      sit amet consectetur adipisicing elit
-                    </p>
+                  <!---
+                    xp : exeperience (array data)
+                    xpd : experience detail (item)
+                  --->
+                  @foreach ($xp as $xpd)
+                  
+                  <div class="col-12" data-aos="fade-up" data-aos-delay="600">
+                    <div class="bg-base p-4 rounded-4 shadow-effect">
+                      <h4>{{  $xpd->experiece_title }}</h4>
+                      <p class="text-brand mb-2">
+                        (
+                          {{ $xpd->experience_start_date }} - {{ $xpd->experience_end_date }}
+                        )
+                      </p>
+                      <p class="mb-0">
+                        {{ $xpd->experience_description }}
+                      </p>
+                    </div>
                   </div>
-                </div>
-
-                <div class="col-12" data-aos="fade-up" data-aos-delay="600">
-                  <div class="bg-base p-4 rounded-4 shadow-effect">
-                    <h4>Applications developer</h4>
-                    <p class="text-brand mb-2">Twitter (2018 - 2020)</p>
-                    <p class="mb-0">
-                      All we are more and design lorem ipsum dolor creativity
-                      sit amet consectetur adipisicing elit
-                    </p>
-                  </div>
-                </div>
-
-                <div class="col-12" data-aos="fade-up" data-aos-delay="600">
-                  <div class="bg-base p-4 rounded-4 shadow-effect">
-                    <h4>Applications developer</h4>
-                    <p class="text-brand mb-2">Twitter (2018 - 2020)</p>
-                    <p class="mb-0">
-                      All we are more and design lorem ipsum dolor creativity
-                      sit amet consectetur adipisicing elit
-                    </p>
-                  </div>
-                </div>
+  
+  
+                  @endforeach
               </div>
             </div>
           </div>
