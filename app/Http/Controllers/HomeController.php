@@ -17,4 +17,5 @@ class HomeController extends Controller
             'edu' => $alledudata
         ]);
     }
+
 }
